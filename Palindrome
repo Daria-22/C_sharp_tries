@@ -1,0 +1,55 @@
+using System;
+using System.Text;
+
+public class Answer
+{
+    public static bool ShowExpectedResult = false;
+    public static bool ShowHints = false;
+
+    public static bool IsPalindrome(string thestr)
+    {
+        // Your palindrome checking logic
+        string teststring = thestr.ToUpper();
+        var sb = new StringBuilder();
+
+        foreach (char c in teststring)
+        {
+            if (!char.IsPunctuation(c) && !char.IsWhiteSpace(c))
+            {
+                sb.Append(c);
+            }
+        }
+
+        teststring = sb.ToString();
+
+        int i = 0, j = teststring.Length - 1;
+
+        while (i <= j)
+        {
+            if (teststring[i] != teststring[j])
+            {
+                return false;
+            }
+            i++;
+            j--;
+        }
+
+        return true;
+    }
+
+    public static void Main(string[] args)
+    {
+        string[] teststrings = { "Hello World!", "Race car!", "Rotor", "More cowbell!", "Madam, I'm Adam." };
+        int palcount = 0;
+
+        foreach (string str in teststrings)
+        {
+            bool learnerResult = IsPalindrome(str);
+            if (learnerResult)
+                palcount++;
+        }
+
+        Console.WriteLine($"Number of palindromes: {palcount}");
+    }
+}
+
