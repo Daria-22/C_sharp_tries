@@ -10,7 +10,7 @@ public class Answer
     {
         // Your palindrome checking logic
         string teststring = thestr.ToUpper();
-        var sb = new StringBuilder();
+        var sb = new StringBuilder(); //turns out it will append the string itself!!! wow! or alternatively, put the string in as an argument
 
         foreach (char c in teststring)
         {
