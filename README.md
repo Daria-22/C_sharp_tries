@@ -9,5 +9,8 @@ Char.IsPunctuation(<character>),
 Char.IsWhiteSpace(<character),
 foreach loop
 for loop
+**2.Convertion:
+Convert/ToInt32methon
+Convert/different_others
 
 
