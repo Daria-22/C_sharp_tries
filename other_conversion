@@ -1,0 +1,34 @@
+using System;
+
+namespace Review
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {///convert bool to string
+      bool toConvert = true;
+      string ConvertedString = Convert.ToString(toConvert);
+      Console.WriteLine(ConvertedString);
+      ///convert string to array of characters
+      string newString = "Mama myla ramu";
+      char [] characterArray = newString.ToCharArray();
+      Console.WriteLine(characterArray);
+
+      var salary = 5588.55;
+      Console.WriteLine(Convert.ToDecimal(salary));
+      /* use this space to write your own short program! 
+      Here's what you learned:
+
+      
+      DATA TYPES: int, double, char, string, bool
+      VARIABLES: datatype variableName = value;
+      COMMON ERRORS: wrong type, wrong value, no semicolon
+      DATA TYPE CONVERSION: implicit, explicit, methods
+
+      Good luck! */
+
+
+
+    }
+  }
+}
