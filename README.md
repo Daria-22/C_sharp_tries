@@ -12,5 +12,8 @@ for loop
 **2.Convertion:
 Convert/ToInt32methon
 Convert/different_others
+3.
+4. Jupiter_age_variables_types_operations
+
 
 
