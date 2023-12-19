@@ -1,0 +1,42 @@
+using System;
+
+namespace Review
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter your amount");
+            
+
+            string userInput = Console.ReadLine();
+            double interest = 4;
+            //double period = 3;
+
+            if (double.TryParse(userInput, out double starting_sum))
+            {
+                Console.WriteLine("You entered: " + starting_sum);
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number.");
+            }
+
+            Console.WriteLine("Enter the period");
+            string userInputperiod = Console.ReadLine();
+
+            if (double.TryParse(userInputperiod, out double period))
+            {
+                Console.WriteLine("You entered period of: " + period);
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter a valid number of period.");
+            }
+
+            double sum = (starting_sum * Math.Pow((1 + interest / 100), period));
+
+            Console.WriteLine($"After {period} years your sum of {starting_sum} will increment to {sum}");
+        }
+    }
+}
