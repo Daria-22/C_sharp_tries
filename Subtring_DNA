@@ -1,0 +1,40 @@
+/* Sundtring grabs a part of string for further use without changing the originial string
+syntax: string.Subtring(start,length)
+length is optional
+start is often obtained by first searching for a character or a string with indeOf('character')
+https://www.codecademy.com/courses/learn-c-sharp/lessons/csharp-working-with-text/exercises/get-parts-of-strings*/
+
+using System;
+
+namespace DNA
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      // dna strand - adenine, cytosinem guanine, thymine
+      string startStrand = "ATGCGATGAGCTTAC";
+
+      // find location of "tga" - end of protein strand
+      int tga = startStrand.IndexOf("TGA");
+
+
+
+      // start point and stop point variables
+      int startPoint = 0;
+      int length = tga + 3;
+
+
+      // define final strand
+      string dna = startStrand.Substring(startPoint, length);
+      Console.WriteLine(dna);
+
+
+      // DNA mutation search
+     
+      char mutationsearch = dna[4-1];
+      Console.WriteLine(mutationsearch);
+
+    }
+  }
+}
