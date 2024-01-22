@@ -1,0 +1,29 @@
+///Write a program that randomly converts part of a text to uppercase and lowercase to look like randomcase.
+
+using System;
+
+namespace Review
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      
+      string mystring = "Back in the 90s people had no smartphones and PCs were rather a luxury than a common belonging";
+      
+      int mystringlength = mystring.Length;
+      Console.WriteLine(mystringlength);
+
+     string string1 = mystring.Substring(0,11);
+     string string2 = mystring.Substring(11,15);
+     string string3 = mystring.Substring(26,10); 
+     string string4 = mystring.Substring(36,14);
+     string string5 = mystring.Substring(50,44);
+   
+
+     string finalstring = string1.ToUpper() +  string2 + string3.ToUpper() + string4.ToLower() + string5.ToUpper();
+     Console.WriteLine(finalstring);   
+     
+    }
+  }
+}
